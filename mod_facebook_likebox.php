@@ -1,7 +1,7 @@
 <?php
 /**
- * @package     Facebook
- * @subpackage  mod_facebook
+ * @package     Facebook_Likebox
+ * @subpackage  mod_facebook_likebox
  *
  * @copyright   Copyright (C) 2013 AtomTech, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
@@ -22,4 +22,4 @@ $header          = (int) $params->get('header');
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 
 // Render the module.
-require JModuleHelper::getLayoutPath('mod_facebook', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_facebook_likebox', $params->get('layout', 'default'));

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <extension type="module" version="3.1" client="site" method="upgrade">
-	<name>mod_facebook</name>
+	<name>mod_facebook_likebox</name>
 	<author>Bruno Batista</author>
 	<creationDate>Jun 2013</creationDate>
 	<copyright>Copyright (C) 2013 AtomTech, Inc. All rights reserved.</copyright>
@@ -8,19 +8,20 @@
 	<authorEmail>bruno@atomtech.com.br</authorEmail>
 	<authorUrl>http://www.atomtech.com.br</authorUrl>
 	<version>1.0</version>
-	<description>MOD_FACEBOOK_XML_DESCRIPTION</description>
+	<description>MOD_FACEBOOK_LIKEBOX_XML_DESCRIPTION</description>
 	<scriptfile />
 	<files>
-		<filename module="mod_facebook">mod_facebook.php</filename>
+		<filename module="mod_facebook_likebox">mod_facebook_likebox.php</filename>
+		<filename>helper.php</filename>
 		<filename>index.html</filename>
-		<filename>mod_facebook.xml</filename>
+		<filename>mod_facebook_likebox.xml</filename>
 		<folder>tmpl</folder>
 	</files>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.mod_facebook.ini</language>
-		<language tag="en-GB">en-GB/en-GB.mod_facebook.sys.ini</language>
-		<language tag="pt-BR">pt-BR/pt-BR.mod_facebook.ini</language>
-		<language tag="pt-BR">pt-BR/pt-BR.mod_facebook.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_facebook_likebox.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_facebook_likebox.sys.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_facebook_likebox.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.mod_facebook_likebox.sys.ini</language>
 	</languages>
 	<config>
 		<fields
@@ -31,31 +32,31 @@
 					name="url"
 					type="url"
 					filter="url"
-					label="MOD_FACEBOOK_FIELD_URL_LABEL"
-					description="MOD_FACEBOOK_FIELD_URL_DESC" />
+					label="MOD_FACEBOOK_LIKEBOX_FIELD_URL_LABEL"
+					description="MOD_FACEBOOK_LIKEBOX_FIELD_URL_DESC" />
 				<field
 					name="width"
 					type="text"
 					size="40"
 					class="inputbox"
 					default="292"
-					label="MOD_FACEBOOK_FIELD_WIDTH_LABEL"
-					description="MOD_FACEBOOK_FIELD_WIDTH_DESC" />
+					label="MOD_FACEBOOK_LIKEBOX_FIELD_WIDTH_LABEL"
+					description="MOD_FACEBOOK_LIKEBOX_FIELD_WIDTH_DESC" />
 				<field
 					name="height"
 					type="text"
 					size="40"
 					class="inputbox"
-					label="MOD_FACEBOOK_FIELD_HEIGHT_LABEL"
-					description="MOD_FACEBOOK_FIELD_HEIGHT_DESC" />
+					label="MOD_FACEBOOK_LIKEBOX_FIELD_HEIGHT_LABEL"
+					description="MOD_FACEBOOK_LIKEBOX_FIELD_HEIGHT_DESC" />
 				<field
 					name="show_faces"
 					type="radio"
 					class="btn-group"
 					default="1"
 					filter="integer"
-					label="MOD_FACEBOOK_FIELD_SHOW_FACES_LABEL"
-					description="MOD_FACEBOOK_FIELD_SHOW_FACES_DESC">
+					label="MOD_FACEBOOK_LIKEBOX_FIELD_SHOW_FACES_LABEL"
+					description="MOD_FACEBOOK_LIKEBOX_FIELD_SHOW_FACES_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
@@ -66,10 +67,10 @@
 					class="inputbox"
 					size="1"
 					filter="string"
-					label="MOD_FACEBOOK_FIELD_COLOR_SCHEME_LABEL"
-					description="MOD_FACEBOOK_FIELD_COLOR_SCHEME_DESC">
-					<option value="light">MOD_FACEBOOK_OPTION_LIGHT</option>
-					<option value="dark">MOD_FACEBOOK_OPTION_DARK</option>
+					label="MOD_FACEBOOK_LIKEBOX_FIELD_COLOR_SCHEME_LABEL"
+					description="MOD_FACEBOOK_LIKEBOX_FIELD_COLOR_SCHEME_DESC">
+					<option value="light">MOD_FACEBOOK_LIKEBOX_OPTION_LIGHT</option>
+					<option value="dark">MOD_FACEBOOK_LIKEBOX_OPTION_DARK</option>
 				</field>
 				<field
 					name="stream"
@@ -77,8 +78,8 @@
 					class="btn-group"
 					default="1"
 					filter="integer"
-					label="MOD_FACEBOOK_FIELD_STREAM_LABEL"
-					description="MOD_FACEBOOK_FIELD_STREAM_DESC">
+					label="MOD_FACEBOOK_LIKEBOX_FIELD_STREAM_LABEL"
+					description="MOD_FACEBOOK_LIKEBOX_FIELD_STREAM_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
@@ -88,8 +89,8 @@
 					class="btn-group"
 					default="1"
 					filter="integer"
-					label="MOD_FACEBOOK_FIELD_SHOW_BORDER_LABEL"
-					description="MOD_FACEBOOK_FIELD_SHOW_BORDER_DESC">
+					label="MOD_FACEBOOK_LIKEBOX_FIELD_SHOW_BORDER_LABEL"
+					description="MOD_FACEBOOK_LIKEBOX_FIELD_SHOW_BORDER_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
@@ -99,8 +100,8 @@
 					class="btn-group"
 					default="1"
 					filter="integer"
-					label="MOD_FACEBOOK_FIELD_HEADER_LABEL"
-					description="MOD_FACEBOOK_FIELD_HEADER_DESC">
+					label="MOD_FACEBOOK_LIKEBOX_FIELD_HEADER_LABEL"
+					description="MOD_FACEBOOK_LIKEBOX_FIELD_HEADER_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
